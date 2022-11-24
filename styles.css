@@ -7,11 +7,11 @@ body, html {
     /* The image used */
     background-image: url("./images/no-worries.jpg");
 
-    /* Full height */
-    height: 100%; 
-
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+	position:fixed;
+	top:0;
+	left:0;
+    min-width: 100%;
+    min-height: 100%;
+	z-index:-1;
+	display:block;
 }
