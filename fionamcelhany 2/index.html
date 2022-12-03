@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./styles.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.slim.min.js"
+      integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/jquery.ripples-min.js"></script>
+  <body>
+    <div class="home">
+      <a href="./memorymachine.html">
+        <div class="title"></div>
+      </a>
+    </div>
+  </body>
+</html>
+
+<script>
+  $(document).ready(function() {
+    var dropLock = false;
+
+    $('.home').ripples({
+      resolution: 250,
+      dropRadius: 40,
+      perturbance: 0.4,
+      interactive: true
+    })
+
+    window.setInterval(() => {
+      if (!dropLock) {
+        const width = $(window).width();
+        const height = $(window).height();
+        const x = Math.floor(Math.random() * width)
+        const y = Math.floor(Math.random() * height)
+
+        console.log(`droplet at x: ${width}, y: ${height}`)
+        $('.home').ripples('drop', x, y, 100, 1);
+      }
+    }, 600);
+
+    window.setInterval(() => dropLock = !dropLock, 2000);
+  });
+  
+</script>
