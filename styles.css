@@ -1,19 +1,31 @@
-body, html {
-    height: 100%;
-    margin: 0;
+body,
+html {
+  height: 100%;
+  margin: 0;
 }
-  
 
-.bg {
-    /* The image used */
-    background-image: url("./images/no-worries.jpg");
+.home {
+  background-color: #9bc4e2;
+  /* height: 100%;
+  width: 100%; */
 
-    /* Full height */
-    height: 100%; 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
 
-    /* Center and scale the image nicely */
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed
+.title {
+  width: 100vw;
+  height: 300px;
+  background-image: url("./images/title.png");
+  background-repeat: no-repeat;
+}
+
+.audio {
+  padding: 8px;
+}
+
+.text {
+  font-size: 20px;
+  color: #f7caca;
 }
